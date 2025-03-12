@@ -9,12 +9,24 @@ public class Main {
       ArrayList<Integer> integerList = Lab4.getList();
       Lab4.outputList(integerList);
 
+      
       System.out.println("\n\nBubble sort results ----------------------------------------------");
+      
+      long startBubbleSort = System.nanoTime();
       ArrayList<Integer> bubbleSortedList = Lab4.bubbleSort(integerList);
+      long endBubbleSort = System.nanoTime(); 
+      long bubbleSortDuration = endBubbleSort - startBubbleSort;
+      System.out.println("Bubble Sort took: " + bubbleSortDuration + " nanoseconds");
+      
       Lab4.outputList(bubbleSortedList);
 
       System.out.println("\n\nInsertion sort results -------------------------------------------");
+      long startInsertionSort = System.nanoTime();
       ArrayList<Integer> insertionSortedList = Lab4.insertionSort(integerList);
+      long endInsertionSort = System.nanoTime();
+      long insertionSortDuration = endInsertionSort - startInsertionSort;
+      System.out.println("Insertion Sort took: " + insertionSortDuration + " nanoseconds");
+      
       Lab4.outputList(insertionSortedList); 
     }
 }
